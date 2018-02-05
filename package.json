@@ -1,6 +1,6 @@
 {
   "name": "vue-js-boilerplate",
-  "description": "Vue.js boilerplate include webpack, vue-router and HMR. Production ready",
+  "description": "Vue.js boilerplate include webpack 3, vue-router, vuex and HMR. Production ready",
   "version": "1.0.0",
   "author": "Maks <maxim.pchelnikov@icandeliver.ru>",
   "license": "MIT",
