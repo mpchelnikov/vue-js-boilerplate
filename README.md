@@ -15,8 +15,23 @@ npm run dev
 npm run build
 ```
 
+## Next steps
+```
+# define your credentials
+git config --global user.name "Your Name"
+git config --global user.email "user@mail.dot"
+```
+
+```
+# set remote
+git remote add origin https://github.com/user/repo.git
+```
+
+```
+Rename your project in `build/index.html`, `build/webpack.base.config.js` and `package.json`
+```
+
 ## Tips
-- Rename your project in `build/index.html`, `build/webpack.base.config.js` and `package.json` 
 - Mark `src` directory as source in your IDE
 - Place all static files (images, fonts etc) in assets directory
 - Make components as small as you can and collect them in page
