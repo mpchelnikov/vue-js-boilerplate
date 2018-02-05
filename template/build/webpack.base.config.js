@@ -75,7 +75,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Vue.js boilerplate',
+      title: 'projectName',
       template: path.resolve(__dirname, 'index.html'),
       filename: '../dist/index.html'
     }),

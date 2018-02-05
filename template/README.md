@@ -2,34 +2,24 @@
 
 > Vue.js boilerplate include webpack, vue-router, vuex and HMR. Production ready
 
-## Build Setup
+## Steps to quick start
 
-``` bash
-# install dependencies
-npm install
+### For Linux:
+Make init.sh file executable: `chmod +x init.sh`
+<br>
+Execute it: `./init.sh`
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-## Next steps
-```
-# define your credentials
-git config --global user.name "Your Name"
-git config --global user.email "user@mail.dot"
-```
-
-```
-# set remote
-git remote add origin https://github.com/user/repo.git
-```
-
-```
+### For other OS or manual setup
+Install dependencies: `npm install`
+<br>
+Set remote: `git remote add origin https://github.com/user/repo.git`
+<br>
 Rename your project in `build/index.html`, `build/webpack.base.config.js` and `package.json`
-```
+
+## Build Setup
+Serve with hot reload at localhost:8080 : `npm run dev`
+<br>
+Build for production with minification : `npm run build`
 
 ## Tips
 - Mark `src` directory as source in your IDE
@@ -39,4 +29,4 @@ Rename your project in `build/index.html`, `build/webpack.base.config.js` and `p
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-<small>2018-01-31</small>
+<small>2018-02-05</small>
