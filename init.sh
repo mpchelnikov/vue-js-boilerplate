@@ -12,7 +12,8 @@ read projectDescription
 
 FILES="./build/index.html
 ./build/webpack.base.config.js
-./package.json"
+./package.json
+./README.md"
 
 cp -r ./template/. ./
 
@@ -33,7 +34,7 @@ done
 echo "Lets set the new git origin URL (ex. https://github.com/user/repo.git):"
 read projectGitUrl
 if [ -n "$projectGitUrl" ]; then
-  git remote add origin $projectGitUrl
+  git remote set-url origin $projectGitUrl
 else
   echo "git origin was not set, continue"
 fi
