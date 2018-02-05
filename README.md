@@ -4,6 +4,10 @@
 
 ## Steps to quick start
 
+Clone project: `git clone https://gitlab.com/m_pchelnikov/vue-boilerplate.git my-project`
+<br>
+Go to new project's directory: `cd my-project/`
+
 ### For Linux:
 Make init.sh file executable: `chmod +x init.sh`
 <br>
