@@ -31,6 +31,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     open: false,
     overlay: true,
     publicPath: '/',
+    historyApiFallback: true, // set true if your router is in history mode
     watchOptions: {
       aggregateTimeout: 300,
       poll: true
