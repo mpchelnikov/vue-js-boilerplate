@@ -9,6 +9,7 @@ module.exports = {
     path: path.join(__dirname, '../dist'),
     filename: 'js/[name]-[hash].js',
     chunkFilename: 'js/[name]-[hash].js',
+    publicPath: '/',
   },
 
   module: {
@@ -69,7 +70,15 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'fonts/[name].[ext]'
+        }
+      },
     ]
   },
 
