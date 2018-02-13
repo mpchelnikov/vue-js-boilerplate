@@ -1,9 +1,14 @@
 {
   "name": "vue-js-boilerplate",
   "description": "Vue.js boilerplate include webpack 3, vue-router, vuex and HMR. Production ready",
-  "version": "1.0.1",
-  "author": "Maks <maxim.pchelnikov@icandeliver.ru>",
+  "version": "1.0.2",
+  "author": "Maks <m_pchelnikov@mail.ru>",
   "license": "MIT",
+  "repository": "gitlab:m_pchelnikov/vue-boilerplate",
+  "engines": {
+    "npm": ">=3.10.7",
+    "node": ">=6.9.0"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js --progress --hide-modules"
