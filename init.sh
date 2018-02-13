@@ -41,6 +41,7 @@ fi
 
 rm -rf ./template/
 rm init.sh
+rm LICENSE
 
 echo Enjoy the dev
 exit 0
