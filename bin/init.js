@@ -25,6 +25,13 @@ const filesToReplace = [
   './package.json',
   './README.md'
 ];
+const filesToRemove = [
+  './template/',
+  './bin/',
+  './node_modules',
+  'init.sh',
+  'LICENSE'
+];
 
 let projectName = '',
   projectDescription = '',
@@ -46,9 +53,41 @@ prompt.get(schema, function (err, result) {
 });
 
 function replaceTemplate() {
-  sh.cp('-r', './node_modules/vue-js-boilerplate/template/.', './')
+  console.log("Replacing boilerplate files and directories...");
+  sh.cp('-r', './node_modules/vue-js-boilerplate/template/.', './');
+  console.log("Files replaced");
+  replaceVariables()
 }
 
 function replaceVariables() {
+  console.log("Processing file's variables...");
+  sh.sed('-i', 'projectName', projectName, filesToReplace);
+  sh.sed('-i', 'projectDescription', projectDescription, filesToReplace);
+  console.log("Variables are replaced");
+  removeInitFiles()
+}
 
+function removeInitFiles() {
+  console.log("Removing init files...");
+  sh.rm('-rf', filesToRemove);
+  console.log("Files and directories are removed");
+  setGitOrigin()
+}
+
+function setGitOrigin() {
+  if (projectGitUrl.length) {
+    console.log("Setting git origin URL...");
+    sh.exec('git remote set-url origin ' + projectGitUrl);
+    console.log("git origin changed");
+  }
+  installDependencies()
+}
+
+function installDependencies() {
+  if (npmInstall.toLowerCase() === 'yes') {
+    console.log("Installing project's dependencies...");
+    sh.exec('npm install');
+    console.log("Dependencies are installed");
+  }
+  console.log("Enjoy the dev");
 }
