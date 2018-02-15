@@ -28,7 +28,6 @@ const filesToReplace = [
 const filesToRemove = [
   './template/',
   './bin/',
-  './node_modules',
   'init.sh',
   'LICENSE'
 ];
