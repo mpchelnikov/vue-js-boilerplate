@@ -79,14 +79,6 @@ function setGitOrigin() {
     sh.exec('git remote set-url origin ' + projectGitUrl);
     console.log("git origin changed");
   }
-  installDependencies()
-}
 
-function installDependencies() {
-  if (npmInstall.toLowerCase() === 'yes') {
-    console.log("Installing project's dependencies...");
-    sh.exec('npm install');
-    console.log("Dependencies are installed");
-  }
   console.log("Enjoy the dev");
 }
