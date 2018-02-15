@@ -13,9 +13,6 @@ const schema = {
     },
     gitUrl: {
       description: 'Enter git origin url'
-    },
-    npmInstall: {
-      description: 'Do you wish to install dependencies now? (yes/no)'
     }
   }
 };
@@ -34,8 +31,7 @@ const filesToRemove = [
 
 let projectName = '',
   projectDescription = '',
-  projectGitUrl = '',
-  npmInstall = 'no';
+  projectGitUrl = '';
 
 prompt.start();
 prompt.get(schema, function (err, result) {
@@ -46,7 +42,6 @@ prompt.get(schema, function (err, result) {
   projectName = result.name;
   projectDescription = result.description;
   projectGitUrl = result.gitUrl;
-  npmInstall = result.npmInstall;
 
   replaceTemplate()
 });
