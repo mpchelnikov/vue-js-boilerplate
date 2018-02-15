@@ -79,6 +79,10 @@ function setGitOrigin() {
     sh.exec('git remote set-url origin ' + projectGitUrl);
     console.log("git origin changed");
   }
+  else {
+    console.log("You should set git remote manually")
+  }
 
-  console.log("Enjoy the dev");
+  console.log("Enjoy the dev!");
+  process.exit()
 }
