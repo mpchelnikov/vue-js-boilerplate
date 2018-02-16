@@ -10,7 +10,7 @@ This CLI require modern node.js, npm and git installed.
 
 Create or go to your project's directory
 <br>
-Run `npm i vue-js-boilerplate`
+Run `npm i -g vue-js-boilerplate` (global flag is required)
 <br>
 Run `vue-bp-init`
 <br>
