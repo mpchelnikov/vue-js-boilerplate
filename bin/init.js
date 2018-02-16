@@ -46,6 +46,7 @@ prompt.get(schema, function (err, result) {
 function replaceTemplate() {
   console.log("Copying boilerplate files and directories...");
   sh.cp('-r', bpDir + '/vue-js-boilerplate/template/*', './');
+  sh.cp('-r', bpDir + '/vue-js-boilerplate/template/.*', './');
   console.log("Files coped");
   replaceVariables()
 }

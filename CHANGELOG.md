@@ -1,6 +1,6 @@
 # Changelog
 
-### 2018-02-16 v1.1.3
+### 2018-02-16 v1.1.5
 #### Fixed:
 - Fixed npm init script, readme update
 
