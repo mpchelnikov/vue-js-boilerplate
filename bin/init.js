@@ -16,20 +16,17 @@ const schema = {
     }
   }
 };
+
+const bpDir = sh.exec('find /usr/local/lib/ -type d -name \'vue-js-boilerplate\'').stdout.replace('\n', '');
+
 const filesToReplace = [
-  './build/index.html',
-  './build/webpack.base.config.js',
-  './package.json',
-  './README.md'
-];
-const filesToRemove = [
-  './template/',
-  './bin/',
-  'init.sh',
-  'LICENSE'
+  bpDir + '/template/build/index.html',
+  bpDir + '/template/build/webpack.base.config.js',
+  bpDir + '/template/package.json',
+  bpDir + '/template/README.md'
 ];
 
-let projectName = '',
+var projectName = '',
   projectDescription = '',
   projectGitUrl = '';
 
@@ -47,9 +44,9 @@ prompt.get(schema, function (err, result) {
 });
 
 function replaceTemplate() {
-  console.log("Replacing boilerplate files and directories...");
-  sh.cp('-r', './node_modules/vue-js-boilerplate/template/.', './');
-  console.log("Files replaced");
+  console.log("Copying boilerplate files and directories...");
+  sh.cp('-r', bpDir + '/template/*', './');
+  console.log("Files coped");
   replaceVariables()
 }
 
@@ -58,13 +55,6 @@ function replaceVariables() {
   sh.sed('-i', 'projectName', projectName, filesToReplace);
   sh.sed('-i', 'projectDescription', projectDescription, filesToReplace);
   console.log("Variables are replaced");
-  removeInitFiles()
-}
-
-function removeInitFiles() {
-  console.log("Removing init files...");
-  sh.rm('-rf', filesToRemove);
-  console.log("Files and directories are removed");
   setGitOrigin()
 }
 
@@ -75,7 +65,7 @@ function setGitOrigin() {
     console.log("git origin changed");
   }
   else {
-    console.log("You should set git remote manually")
+    console.log("You should set git remote manually!")
   }
 
   console.log("Enjoy the dev!");
