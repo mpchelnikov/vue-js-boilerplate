@@ -17,7 +17,7 @@ const schema = {
   }
 };
 
-const bpDir = sh.exec('find /usr/local/lib/ -type d -name \'vue-js-boilerplate\'').stdout.replace('\n', '');
+const bpDir = sh.exec('npm root -g').stdout.replace('\n', '');
 
 const filesToReplace = [
   bpDir + '/template/build/index.html',

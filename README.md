@@ -3,7 +3,7 @@
 > Vue.js boilerplate CLI include webpack, vue-router, vuex, HMR and docker support. Production ready
 
 ## Steps to quick start:
-You can install boilerplate from npm (linux only) or clone from gitlab and setup:
+You can install boilerplate from npm or clone from gitlab and setup:
 
 ### * Install from npm
 This CLI require modern node.js, npm and git installed.
