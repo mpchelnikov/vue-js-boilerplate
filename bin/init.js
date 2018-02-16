@@ -20,10 +20,10 @@ const schema = {
 const bpDir = sh.exec('npm root -g').stdout.replace('\n', '');
 
 const filesToReplace = [
-  bpDir + '/template/build/index.html',
-  bpDir + '/template/build/webpack.base.config.js',
-  bpDir + '/template/package.json',
-  bpDir + '/template/README.md'
+  './build/index.html',
+  './build/webpack.base.config.js',
+  './package.json',
+  './README.md'
 ];
 
 var projectName = '',
